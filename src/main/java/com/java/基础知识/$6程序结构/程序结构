@@ -1,0 +1,138 @@
+1.if else
+if如果后面不加大括号的话只能执行if后的单条语句
+比如
+int i=3;
+if(i>3)
+int y=4;
+执行错误，因为int y=4;是两条语句，int y和y=4;
+
+if 语句
+一个 if 语句包含一个布尔表达式和一条或多条语句。
+
+if...else语句
+if 语句后面可以跟 else 语句，当 if 语句的布尔表达式值为 false 时，else 语句块会被执行。
+语法
+if…else 的用法如下：
+if(布尔表达式){
+   //如果布尔表达式的值为true
+}else{
+   //如果布尔表达式的值为false
+}
+
+2.switch
+switch 语句由一个控制表达式和多个case标签组成。
+
+switch 控制表达式支持的类型有byte、short、char、int、enum（Java 5）、String(Java 7)。
+
+switch-case语句完全可以与if-else语句互转，但通常来说，switch-case语句执行效率要高。
+
+default在当前switch找不到匹配的case时执行。default并不是必须的。
+
+一旦case匹配，就会顺序执行后面的程序代码，而不管后面的case是否匹配，直到遇见break。
+
+
+switch 语句
+switch 语句判断一个变量与一系列值中某个值是否相等，每个值称为一个分支。
+语法
+switch 语法格式如下：
+switch(expression){
+    case value :
+       //语句
+       break; //可选
+    case value :
+       //语句
+       break; //可选
+    //你可以有任意数量的case语句
+    default : //可选
+       //语句
+}
+
+int i = 9;
+		switch (i)
+		{
+			case 9:
+				System.out.println("是1呀！");
+			case 2:
+				System.out.println("是2ya!");
+		}
+结果为
+是1呀！
+是2ya!
+
+
+
+
+
+switch 语句有如下规则：
+switch 语句中的变量类型可以是： byte、short、int 或者 char。从 Java SE 7 开始，switch 支持字符串类型了，同时 case 标签必须为字符串常量或字面量。
+switch 语句可以拥有多个 case 语句。每个 case 后面跟一个要比较的值和冒号。
+case 语句中的值的数据类型必须与变量的数据类型相同，而且只能是常量或者字面常量。
+当变量的值与 case 语句的值相等时，那么 case 语句之后的语句开始执行，直到 break 语句出现才会跳出 switch 语句。
+当遇到 break 语句时，switch 语句终止。程序跳转到 switch 语句后面的语句执行。case 语句不必须要包含 break 语句。如果没有 break 语句出现，程序会继续执行下一条 case 语句，直到出现 break 语句。
+switch 语句可以包含一个 default 分支，该分支必须是 switch 语句的最后一个分支。default 在没有 case 语句的值和变量值相等的时候执行。default 分支不需要 break 语句。
+
+
+3.for
+遍历Collection的简单方式的等价代码
+/* 建立一个Collection */
+String[] strings = {"A"， "B"， "C"， "D"};
+Collection stringList = java.util.Arrays.asList(strings);
+/* 开始遍历 */
+for (Iterator 变量名乙 = list.iterator(); 变量名乙.hasNext();) {
+Object str = 变量名乙.next();
+System.out.println(str);/* 依次输出“A”、“B”、“C”、“D” */
+}
+
+禁止重新赋值
+int[] integers = {1， 2， 3， 4};
+for (final int i : integers) {
+i = i / 2; /* 编译时出错 */
+}
+注意，这只是禁止了对循环变量进行重新赋值。给循环变量的属性赋值，或者调用能让循环变量的内容变化的方法，是不被禁止的。
+
+允许修改状态
+Random[] randoms = new Random[]{new Random(1)， new Random(2)， new Random(3)};
+for (final Random r : randoms) {
+r.setSeed(4);/* 将所有Random对象设成使用相同的种子 */
+System.out.println(r.nextLong());/* 种子相同，第一个结果也相同 */
+}
+
+4.while do while
+do while先执行一次再循环
+while直接循环
+
+5.break continue
+break:
+1.break作用的范围，要么是switch语句，要么是循环语句
+2.当break语句单独存在时，下面不要定义其他语句，因为执行不到
+3.break跳出当前循环，如果出现了循环嵌套的情况，break想要跳出指定的循环，可以通过标号来完成
+
+xiaoqiang:for (int i=1;i<10;i++){
+           xiaoming: for(int j=1;j<=i;j++){
+                System.out.print(i+"*"+j+"="+i*j+"  ");
+                break xiaoqiang;
+            }
+            System.out.println();
+        }
+
+
+
+continue:
+1.作用范围为循环结构
+2.结束本次循环，继续下次循环
+3.如果continue单独存在时，下面不要存在任何语句，以为执行不到
+
+xiaoqiang:for (int i=1;i<10;i++){
+           xiaoming: for(int j=1;j<=i;j++){
+                System.out.print(i+"*"+j+"="+i*j+"  ");
+                continue xiaoqiang;
+            }
+            System.out.println();
+        }
+
+
+
+
+
+
+1.作用范围为循环结构
