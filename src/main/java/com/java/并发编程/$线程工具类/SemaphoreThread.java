@@ -1,4 +1,4 @@
-package com.java.并发编程.$5构建基础模块;
+package com.java.并发编程.$线程工具类;
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;
@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @ClassName:SemaphoreThread
- * @Description:TODO
+ * @Description:信号量
  * @Author: guoyong
  * @Date:2019/11/26 19:42
  **/

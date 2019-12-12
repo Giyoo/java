@@ -1,7 +1,6 @@
-package com.java.并发编程.$5构建基础模块;
+package com.java.并发编程.$线程工具类;
 
 import java.util.concurrent.CyclicBarrier;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

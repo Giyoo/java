@@ -1,4 +1,4 @@
-package com.java.并发编程.$5构建基础模块;
+package com.java.并发编程.$线程工具类;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
