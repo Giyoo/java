@@ -1,9 +1,6 @@
 package com.java.并发编程.$线程工具类;
 
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.*;
 
 /**
  * @ClassName:FutrueTaskTest
@@ -17,6 +14,7 @@ public class FutrueTaskTest {
         FutureTaskThread task = new FutureTaskThread(200);
         FutureTask<Integer> futureTask = new FutureTask<>(task);
         executorService.submit(futureTask);
+        Future future = executorService.submit(task);
         executorService.shutdown();
         System.out.println("主线程正在执行任务！");
         try {

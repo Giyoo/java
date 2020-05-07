@@ -25,6 +25,9 @@ public class CyclicBarrierThread implements Runnable {
             for (int j=0;j<10;j++){
                 System.out.println(i+"开始了第"+j+"次了！");
                 cyclicBarrier.await();
+                cyclicBarrier.reset();
+                System.out.println("重新开始"+j);
+                cyclicBarrier.await();
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
